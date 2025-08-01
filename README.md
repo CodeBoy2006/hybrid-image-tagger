@@ -4,7 +4,7 @@
 ![Python](https://img.shields.io/badge/Python-3.7\+-00A67E?style=for-the-badge&logo=python&logoColor=white)
 [![OpenAI](https://img.shields.io/badge/OpenAI-Compatible-00A67E?style=for-the-badge&logo=openai&logoColor=white)](https://openai.com/)
 
-A powerful command-line tool that uses AI (LLM) to generate detailed, structured tags for images. Perfect for organizing image datasets, training AI models, or enhancing image metadata.
+A powerful command-line tool that uses AI (VLM) to generate detailed, structured tags for images. Perfect for organizing image datasets, training AI models, or enhancing image metadata.
 
 ## Features
 
@@ -37,7 +37,7 @@ pip install -r requirements.txt
 For the best experience, especially for first-time users, run in interactive mode:
 
 ```bash
-python tagger.py --interactive
+python tagger.py
 ```
 
 This will guide you through all configuration options with helpful prompts and validation.
