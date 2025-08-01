@@ -1,10 +1,10 @@
 
-# AI Image Tagger
+# LLM Image Tagger
 
-![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Python](https://img.shields.io/badge/Python-3.7\+-00A67E?style=for-the-badge&logo=python&logoColor=white)
+[![OpenAI](https://img.shields.io/badge/OpenAI-Compatible-00A67E?style=for-the-badge&logo=openai&logoColor=white)](https://openai.com/)
 
-A powerful command-line tool that uses AI to generate detailed, structured tags for images. Perfect for organizing image datasets, training AI models, or enhancing image metadata.
+A powerful command-line tool that uses AI (LLM) to generate detailed, structured tags for images. Perfect for organizing image datasets, training AI models, or enhancing image metadata.
 
 ## Features
 
