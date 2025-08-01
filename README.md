@@ -10,7 +10,7 @@ A powerful command-line tool that uses AI (VLM) to generate detailed, structured
 
 - 🏷️ **Detailed Tag Generation**: Creates comprehensive, structured tags for images using advanced AI models
 - 🖼️ **Multi-format Support**: Works with JPG, PNG, BMP, WebP, and TIFF images
-- 🗜️ **Smart Compression**: Automatically compresses large images (>1MB) to optimize API usage
+- 🗜️ **Smart Compression**: Automatically compresses large images to optimize API usage
 - ⚡ **Batch Processing**: Process multiple images concurrently with adjustable concurrency
 - 🎯 **Customizable Prompts**: Use built-in prompts or provide your own for specialized tagging
 - 🏷️ **Marker Words**: Prepend custom tags to all generated tags
@@ -103,10 +103,10 @@ python tagger.py \
 
 ## Output Format
 
-For each image, the tool generates a `.txt` file with the same name containing comma-separated tags. For example:
+For each image, the tool generates a `.txt` file with the same name containing comma-separated tags and NL phrases. For example:
 
 ```
-1girl, anime style, long black hair, blue eyes, school uniform, classroom, daytime, soft lighting, detailed, masterpiece, best quality
+1girl, anime style, long black hair, blue eyes, holding a see-through brown cup, school uniform, classroom, daytime, soft lighting, detailed, masterpiece, best quality
 ```
 
 ## Image Compression
