@@ -1,3 +1,8 @@
+
+Of course. Here is the modified `README.md` with the recommendation to use a virtual environment (`venv`) integrated into the installation instructions for clarity and best practice.
+
+---
+
 # Hybrid Image Tagger
 
 ![Python](https://img.shields.io/badge/Python-3.10+-00A67E?style=for-the-badge&logo=python&logoColor=white)[![OpenAI](https://img.shields.io/badge/OpenAI-Compatible-00A67E?style=for-the-badge&logo=openai&logoColor=white)](https://openai.com/)![ONNX](https://img.shields.io/badge/ONNX-RUNTIME-00A67E?style=for-the-badge&logo=ONNX&logoColor=white)![Gradio](https://img.shields.io/badge/Gradio-UI-00A67E?style=for-the-badge&logo=gradio&logoColor=white)
@@ -6,25 +11,51 @@ A powerful and user-friendly tool that uses a hybrid approach, combining the str
 
 ## Features
 
-- **Hybrid Tagging**: Utilizes both WD 1.4 Tagger and a VLM for comprehensive and high-quality tag generation.
-- **Dual Channel Processing**: Choose between different strategies for combining the taggers, including parallel and sequential processing.
-- **Advanced Post-Processing**: A rich set of options to refine tags, including custom replacements, trigger words, and more.
-- **User-Friendly UI**: A Gradio interface for easy configuration and use.
-- **Batch Processing**: Process multiple images concurrently with adjustable concurrency.
-- **Smart Compression**: Automatically compresses large images to optimize API usage.
+-   **Hybrid Tagging**: Utilizes both WD 1.4 Tagger and a VLM for comprehensive and high-quality tag generation.
+-   **Dual Channel Processing**: Choose between different strategies for combining the taggers, including parallel and sequential processing.
+-   **Advanced Post-Processing**: A rich set of options to refine tags, including custom replacements, trigger words, and more.
+-   **User-Friendly UI**: A Gradio interface for easy configuration and use.
+-   **Batch Processing**: Process multiple images concurrently with adjustable concurrency.
+-   **Smart Compression**: Automatically compresses large images to optimize API usage.
 
 ## Installation
 
 ### Prerequisites
 
-- Python 3.7 or higher
-- An API key from a compatible AI service (e.g., OpenAI) for the VLM tagger.
+-   Python 3.10 or higher
+-   An API key from a compatible AI service (e.g., OpenAI) for the VLM tagger.
 
-### Install Dependencies
+### Recommended Setup
 
-```bash
-pip install -r requirements.txt
-```
+It is highly recommended to use a Python virtual environment (`venv`) to avoid conflicts with other projects and system-wide packages.
+
+1.  **Create a Virtual Environment**
+
+    From your project's root directory, run:
+    ```bash
+    python -m venv venv
+    ```
+
+2.  **Activate the Virtual Environment**
+
+    The activation command depends on your operating system:
+
+    -   **On Windows (Command Prompt or PowerShell):**
+        ```bash
+        .\venv\Scripts\activate
+        ```
+    -   **On macOS and Linux:**
+        ```bash
+        source venv/bin/activate
+        ```
+    Your terminal prompt should now be prefixed with `(venv)`.
+
+3.  **Install Dependencies**
+
+    With the virtual environment active, install the required packages:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
 ## Usage
 

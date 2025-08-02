@@ -16,7 +16,7 @@ def create_ui():
             </p>
         </div>
         <div>
-            <a href="https://github.com/CodeBoy2006/llm-image-tagger" target="_blank" rel="noopener noreferrer" 
+            <a href="https://github.com/CodeBoy2006/hybrid-image-tagger" target="_blank" rel="noopener noreferrer" 
                style="display: inline-block; transition: all 0.3s ease; text-decoration: none; transform: translateY(0);"
                onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)'" 
                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'">
