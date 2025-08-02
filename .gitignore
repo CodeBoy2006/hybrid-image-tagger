@@ -1,2 +1,4 @@
 /venv
 /wd_model_cache
+*.pyc
+__pycache__
