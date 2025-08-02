@@ -1,8 +1,9 @@
 
-# LLM Image Tagger
+# Hybrid Image Tagger
 
-![Python](https://img.shields.io/badge/Python-3.7\+-00A67E?style=for-the-badge&logo=python&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.10\+-00A67E?style=for-the-badge&logo=python&logoColor=white)
 [![OpenAI](https://img.shields.io/badge/OpenAI-Compatible-00A67E?style=for-the-badge&logo=openai&logoColor=white)](https://openai.com/)
+[![ONNX](https://img.shields.io/badge/ONNX-RUNTIME-00A67E?style=for-the-badge&logo=ONNX&logoColor=white)](https://openai.com/)
 
 A powerful command-line tool that uses AI (VLM) to generate detailed, structured tags for images. Perfect for organizing image datasets, training AI models, or enhancing image metadata.
 

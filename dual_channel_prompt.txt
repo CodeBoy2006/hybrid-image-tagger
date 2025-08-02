@@ -1,0 +1,16 @@
+You are an expert at merging image tags from two different tagging styles into a single cohesive set for LoRA training.
+
+Given the following tag sets for the **same image**:
+
+- **Danbooru Tags (structured, booru-style):** `{danbooru_tags}`
+- **Natural Language Tags (descriptive phrases):** `{natural_tags}`
+
+### Task:
+Intelligently merge these tag sets into one clean, comma-separated list following these rules:
+
+- Prioritize **Danbooru tags** when meanings overlap, ensuring consistency.
+- Preserve unique **natural language phrases** that provide valuable descriptions not captured by Danbooru tags.
+- Remove redundant or duplicate tags.
+- Maintain clear readability and logical flow.
+
+**Merged Tags:**
