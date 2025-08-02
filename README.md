@@ -2,7 +2,7 @@
 
 ![Python](https://img.shields.io/badge/Python-3.10+-00A67E?style=for-the-badge&logo=python&logoColor=white)[![OpenAI](https://img.shields.io/badge/OpenAI-Compatible-00A67E?style=for-the-badge&logo=openai&logoColor=white)](https://openai.com/)![ONNX](https://img.shields.io/badge/ONNX-RUNTIME-00A67E?style=for-the-badge&logo=ONNX&logoColor=white)![Gradio](https://img.shields.io/badge/Gradio-UI-00A67E?style=for-the-badge&logo=gradio&logoColor=white)
 
-A powerful and user-friendly tool that uses a hybrid approach, combining the strengths of the WD 1.4 Tagger and a Vision Language Model (VLM), to generate detailed and accurate tags for images. The tool is wrapped in a Gradio UI for ease of use.
+A powerful and user-friendly tool that uses a hybrid approach, combining the strengths of the WD Tagger and a Vision Language Model (VLM), to generate detailed and accurate tags for images. The tool is wrapped in a Gradio UI for ease of use.
 
 ## Features
 
@@ -73,7 +73,7 @@ The Gradio interface is divided into three main sections:
 
 ### Tagging Modes
 
--   **WD Tagger Only**: Uses only the WD 1.4 Tagger.
+-   **WD Tagger Only**: Uses only the WD Tagger.
 -   **LLM Only**: Uses only the VLM tagger.
 -   **Dual Channel**: Uses both taggers. You can choose between three strategies:
     -   **Quick**: Runs both taggers in parallel for each image.
