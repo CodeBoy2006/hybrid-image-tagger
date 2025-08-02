@@ -6,7 +6,7 @@ A powerful and user-friendly tool that uses a hybrid approach, combining the str
 
 ## Features
 
--   **Hybrid Tagging**: Utilizes both WD 1.4 Tagger and a VLM for comprehensive and high-quality tag generation.
+-   **Hybrid Tagging**: Utilizes both WD Tagger and a VLM for comprehensive and high-quality tag generation.
 -   **Dual Channel Processing**: Choose between different strategies for combining the taggers, including parallel and sequential processing.
 -   **Advanced Post-Processing**: A rich set of options to refine tags, including custom replacements, trigger words, and more.
 -   **User-Friendly UI**: A Gradio interface for easy configuration and use.
