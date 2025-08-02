@@ -3,9 +3,30 @@ from . import config
 from .processing import process_images_in_parallel
 
 def create_ui():
-    with gr.Blocks(theme=gr.themes.Soft()) as ui:
-        gr.Markdown("# Hybrid Image Tagger\nA versatile tool for superior image tagging, utilizing WD tagger and VLM with advanced post-processing.")
-        
+    with gr.Blocks(title="Hybrid Image Tagger", theme=gr.themes.Soft()) as ui:
+        gr.Markdown('''
+<div style="background: linear-gradient(135deg, #22d3ee 0%, #6366f1 100%); padding: 24px; border-radius: 16px; margin-bottom: 20px; color: white; box-shadow: 0 8px 32px rgba(99, 102, 241, 0.12);">
+    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+        <div>
+            <h1 style="margin: 0; font-size: 2.4em; font-weight: 600; text-shadow: none; letter-spacing: -0.02em;">
+                🏷️ Hybrid Image Tagger
+            </h1>
+            <p style="margin: 12px 0 0 0; font-size: 1.1em; opacity: 0.92; font-weight: 400; line-height: 1.5; max-width: 600px;">
+                A versatile tool for superior image tagging, utilizing WD tagger and VLM with advanced post-processing.
+            </p>
+        </div>
+        <div>
+            <a href="https://github.com/CodeBoy2006/llm-image-tagger" target="_blank" rel="noopener noreferrer" 
+               style="display: inline-block; transition: all 0.3s ease; text-decoration: none; transform: translateY(0);"
+               onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)'" 
+               onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'">
+                <img src="https://img.shields.io/badge/View_on_GitHub-181717?style=for-the-badge&logo=github&logoColor=white" 
+                     alt="View on GitHub" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            </a>
+        </div>
+    </div>
+</div>
+''')
         with gr.Row():
             with gr.Column(scale=1):
                 gr.Markdown("### 1. Upload & Configure")

@@ -1,29 +1,24 @@
-
 # Hybrid Image Tagger
 
-![Python](https://img.shields.io/badge/Python-3.10\+-00A67E?style=for-the-badge&logo=python&logoColor=white)
-[![OpenAI](https://img.shields.io/badge/OpenAI-Compatible-00A67E?style=for-the-badge&logo=openai&logoColor=white)](https://openai.com/)
-[![ONNX](https://img.shields.io/badge/ONNX-RUNTIME-00A67E?style=for-the-badge&logo=ONNX&logoColor=white)](https://openai.com/)
+![Python](https://img.shields.io/badge/Python-3.10+-00A67E?style=for-the-badge&logo=python&logoColor=white)[![OpenAI](https://img.shields.io/badge/OpenAI-Compatible-00A67E?style=for-the-badge&logo=openai&logoColor=white)](https://openai.com/)![ONNX](https://img.shields.io/badge/ONNX-RUNTIME-00A67E?style=for-the-badge&logo=ONNX&logoColor=white)![Gradio](https://img.shields.io/badge/Gradio-UI-00A67E?style=for-the-badge&logo=gradio&logoColor=white)
 
-A powerful command-line tool that uses AI (VLM) to generate detailed, structured tags for images. Perfect for organizing image datasets, training AI models, or enhancing image metadata.
+A powerful and user-friendly tool that uses a hybrid approach, combining the strengths of the WD 1.4 Tagger and a Vision Language Model (VLM), to generate detailed and accurate tags for images. The tool is wrapped in a Gradio UI for ease of use.
 
 ## Features
 
-- 🏷️ **Detailed Tag Generation**: Creates comprehensive, structured tags for images using advanced AI models
-- 🖼️ **Multi-format Support**: Works with JPG, PNG, BMP, WebP, and TIFF images
-- 🗜️ **Smart Compression**: Automatically compresses large images to optimize API usage
-- ⚡ **Batch Processing**: Process multiple images concurrently with adjustable concurrency
-- 🎯 **Customizable Prompts**: Use built-in prompts or provide your own for specialized tagging
-- 🏷️ **Marker Words**: Prepend custom tags to all generated tags
-- 💾 **Flexible Output**: Save tags alongside images or in a separate directory
-- 🔄 **Resume Capability**: Skip images that already have tag files
+- **Hybrid Tagging**: Utilizes both WD 1.4 Tagger and a VLM for comprehensive and high-quality tag generation.
+- **Dual Channel Processing**: Choose between different strategies for combining the taggers, including parallel and sequential processing.
+- **Advanced Post-Processing**: A rich set of options to refine tags, including custom replacements, trigger words, and more.
+- **User-Friendly UI**: A Gradio interface for easy configuration and use.
+- **Batch Processing**: Process multiple images concurrently with adjustable concurrency.
+- **Smart Compression**: Automatically compresses large images to optimize API usage.
 
 ## Installation
 
 ### Prerequisites
 
 - Python 3.7 or higher
-- An API key from a compatible AI service (default: OpenAI-compatible API)
+- An API key from a compatible AI service (e.g., OpenAI) for the VLM tagger.
 
 ### Install Dependencies
 
@@ -33,91 +28,42 @@ pip install -r requirements.txt
 
 ## Usage
 
-### Recommended: Interactive Mode
-
-For the best experience, especially for first-time users, run in interactive mode:
+To launch the application, run the following command:
 
 ```bash
 python tagger.py
 ```
 
-This will guide you through all configuration options with helpful prompts and validation.
+This will start the Gradio web UI, which you can access in your browser.
 
-### Command Line Interface
+## The Interface
 
-For advanced users or automation, you can use command-line arguments:
+The Gradio interface is divided into three main sections:
 
-```bash
-python tagger.py --input-dir /path/to/images --api-key YOUR_API_KEY
-```
+1.  **Upload & Configure**: Upload your images and configure the tagging and post-processing settings.
+2.  **Processing Status**: Monitor the progress of the tagging process.
+3.  **Download Results**: Download the generated tags as a zip file.
 
-## Core Parameters
+### Tagging Modes
 
-| Parameter | Description |
-|-----------|-------------|
-| `--input-dir` `-i` | Directory containing input images |
-| `--api-url` `-u` | The complete base API URL for the requests |
-| `--api-key` `-k` | API key for authentication |
-| `--output-dir` `-o` | Directory to save tag files (default: same as input) |
-| `--concurrency` `-c` | Number of concurrent requests (default: 4) |
-| `--skip-existing` `-s` | Skip images that already have tag files |
-| `--dry-run` `-d` | Preview actions without making API calls |
+-   **WD Tagger Only**: Uses only the WD 1.4 Tagger.
+-   **LLM Only**: Uses only the VLM tagger.
+-   **Dual Channel**: Uses both taggers. You can choose between three strategies:
+    -   **Quick**: Runs both taggers in parallel for each image.
+    -   **Standard**: Runs the taggers sequentially for each image.
+    -   **Detailed**: Runs both taggers in parallel and saves all intermediate files.
 
-## Advanced Options
+### Post-Processing
 
-Additional parameters are available for customization:
+A wide range of post-processing options are available to clean and refine the generated tags:
 
-```bash
-python tagger.py --help
-```
-
-## Custom Prompts
-
-You can customize the tagging behavior by creating a `prompt.txt` file in the same directory as the script. The tool will automatically use this file if it exists.
-
-The prompt should instruct the AI on how to analyze and tag images. The default prompt is optimized for generating structured tags suitable for AI image generation models.
-
-## Examples
-
-### Interactive Mode (Recommended)
-
-```bash
-python tagger.py
-```
-
-### Basic Tagging
-
-```bash
-python tagger.py -i ./my_images -k YOUR_API_KEY
-```
-
-### Advanced Processing
-
-```bash
-python tagger.py \
-  -i ./dataset \
-  -o ./tags \
-  -k YOUR_API_KEY \
-  -c 8 \
-  -s
-```
+-   **Text Formatting**: Replace underscores, escape brackets, normalize spaces, remove duplicates, and sort alphabetically.
+-   **Trigger Words**: Add custom prefixes and suffixes to your tags.
+-   **Advanced**: Set custom text replacements, and limits for the maximum number of tags and minimum tag length.
 
 ## Output Format
 
-For each image, the tool generates a `.txt` file with the same name containing comma-separated tags and NL phrases. For example:
-
-```
-1girl, anime style, long black hair, blue eyes, holding a see-through brown cup, school uniform, classroom, daytime, soft lighting, detailed, masterpiece, best quality
-```
-
-## Image Compression
-
-Images larger than 2MB are automatically compressed to optimize API usage:
-
-- Images are resized to a maximum of 2048×2048 pixels
-- Compressed to JPEG format with adjustable quality
-- Target file size is approximately 2MB
-- Compression ratio is displayed during processing
+For each image, the tool generates a `.txt` file with the same name containing comma-separated tags.
 
 ## Contributing
 
