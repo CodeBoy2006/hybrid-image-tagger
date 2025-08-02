@@ -12,6 +12,7 @@ A powerful and user-friendly tool that uses a hybrid approach, combining the str
 -   **User-Friendly UI**: A Gradio interface for easy configuration and use.
 -   **Batch Processing**: Process multiple images concurrently with adjustable concurrency.
 -   **Smart Compression**: Automatically compresses large images to optimize API usage.
+-   **User-friendly Gradio Interface**: ![Interface](/assets/Interface.png)
 
 ## Installation
 
