@@ -1,8 +1,3 @@
-
-Of course. Here is the modified `README.md` with the recommendation to use a virtual environment (`venv`) integrated into the installation instructions for clarity and best practice.
-
----
-
 # Hybrid Image Tagger
 
 ![Python](https://img.shields.io/badge/Python-3.10+-00A67E?style=for-the-badge&logo=python&logoColor=white)[![OpenAI](https://img.shields.io/badge/OpenAI-Compatible-00A67E?style=for-the-badge&logo=openai&logoColor=white)](https://openai.com/)![ONNX](https://img.shields.io/badge/ONNX-RUNTIME-00A67E?style=for-the-badge&logo=ONNX&logoColor=white)![Gradio](https://img.shields.io/badge/Gradio-UI-00A67E?style=for-the-badge&logo=gradio&logoColor=white)
